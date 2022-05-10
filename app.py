@@ -15,11 +15,15 @@ df0 = df.sort_values(by= "date")
 fig = px.line(df0, x="date", y="sales", color="region")
 
 app.layout = html.Div(children=[
-    html.H1(children="Soul's Food"),
+    html.H1(children="Soul's Food", style={'textAlign':'center'}),
 
     html.Div(children='''
         Pink Morsel Sales Analysis Dashboard.
-    '''),
+    ''', style={'textAlign':'center'}),
+
+    html.Br(),
+    html.Label('Radio Items'),
+    dcc.RadioItems(['North', 'South', 'East', 'West','All'], style={'padding':10, 'flex':1}),
 
     dcc.Graph(
         id='example-graph',
