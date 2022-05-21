@@ -13,7 +13,7 @@ app = Dash(__name__)
 df = pd.read_csv("Final_sales.csv")
 df0 = df.sort_values(by= "date")
 
-COLORS={'primary':'#FEDBFF',
+COLORS={'primary':'#4CE07D',
         'secondary':'#D598EB',
         'font':'#522A61'}
 
